@@ -25,5 +25,4 @@ def test_traffic_forecast_to_dict():
     forecast = TrafficForecast(FAKE_RAW_FORECAST)
     data = forecast.to_dict()
     assert isinstance(data, dict)
-    # assert datetime.strptime(data["timestamp"], "%Y-%m-%d %H:%M:%S")
     assert data["vehicles_count"] == FAKE_RAW_FORECAST["bm_prevision"]
